@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokedexCard</title>
+    <link rel="stylesheet" href="./assets/styles/global.css" />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <nav class="main-menu">
+        <h1>PokedexCard</h1>
+        <img
+          class="logo"
+          src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/4cfdcb5a-0137-4457-8be1-6e7bd1f29ebb"
+          alt="Logo"
+        />
+        <ul>
+          <li class="nav-item active">
+            <b></b>
+            <b></b>
+            <a href="index.html">
+              <i class="fa fa-house nav-icon"></i>
+              <span class="nav-text">Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <b></b>
+            <b></b>
+            <a href="adddata.html">
+              <i class="fa fa-plus nav-icon"></i>
+              <span class="nav-text">Add Data</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="content">
+        <h2>Pokémon Cards</h2>
+        <table id="pokemon-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Subtypes</th>
+              <th>Type</th>
+              <th>Rarity</th>
+              <th>Image</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data rows will be inserted here -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <script src="./assets/scripts/cards.js"></script>
+    <script src="./assets/scripts/global.js"></script>
+  </body>
+</html>
