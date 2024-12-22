@@ -30,3 +30,49 @@ table img {
   width: 50px;
   height: auto;
 }
+
+.search-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-container input {
+  padding: 8px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 10px;
+  margin: 0 5px;
+  background-color: rgb(73, 57, 113);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#page-number {
+  font-size: 18px;
+  margin: 0 10px;
+}
+.navbar-logo {
+  width: 70px; /* Sesuaikan ukuran sesuai keinginan */
+  height: 70px; /* Pastikan tinggi dan lebar sama untuk menjaga proporsi */
+  object-fit: cover; /* Memastikan gambar terpotong dengan baik jika ukurannya tidak sesuai */
+  margin-bottom: 20px;
+  margin-left: 50px;
+}

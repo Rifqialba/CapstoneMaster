@@ -1,0 +1,23 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+.navbar-logo {
+  width: 70px; /* Sesuaikan ukuran sesuai keinginan */
+  height: 70px; /* Pastikan tinggi dan lebar sama untuk menjaga proporsi */
+  object-fit: cover; /* Memastikan gambar terpotong dengan baik jika ukurannya tidak sesuai */
+  margin-bottom: 20px;
+  margin-left: 50px;
+}

@@ -1,36 +1,97 @@
+/* Styling untuk konten utama */
 .content {
   padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Styling form */
 form {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Styling label */
 form label {
-  margin-top: 10px;
+  margin-top: 15px;
   font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
 }
 
+/* Styling input fields */
 form input {
-  padding: 10px;
-  margin-top: 5px;
+  padding: 12px;
+  margin-top: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fafafa;
+  flex-basis: 48%; /* Membuat input berbagi ruang horizontal */
+  transition: border-color 0.3s ease;
 }
 
+/* Efek saat input di focus */
+form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Styling tombol submit */
 form button {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 12px 20px;
   background-color: #007bff;
   color: white;
+  font-size: 1.1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+/* Efek hover pada tombol */
 form button:hover {
   background-color: #0056b3;
+}
+
+/* Styling untuk tombol dalam keadaan aktif (disabled) */
+form button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Responsif untuk tampilan mobile */
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+    width: 100%;
+  }
+
+  form label {
+    font-size: 1rem;
+  }
+
+  form input {
+    font-size: 0.95rem;
+  }
+
+  form button {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+}
+.navbar-logo {
+  width: 70px; /* Sesuaikan ukuran sesuai keinginan */
+  height: 70px; /* Pastikan tinggi dan lebar sama untuk menjaga proporsi */
+  object-fit: cover; /* Memastikan gambar terpotong dengan baik jika ukurannya tidak sesuai */
+  margin-bottom: 20px;
+  margin-left: 50px;
 }

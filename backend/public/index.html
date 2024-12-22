@@ -11,12 +11,7 @@
   <body>
     <main>
       <nav class="main-menu">
-        <h1>PokedexCard</h1>
-        <img
-          class="logo"
-          src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/4cfdcb5a-0137-4457-8be1-6e7bd1f29ebb"
-          alt="Logo"
-        />
+        <img src="./assets/components/ball.png" alt="" class="navbar-logo" />
         <ul>
           <li class="nav-item active">
             <b></b>
@@ -34,11 +29,25 @@
               <span class="nav-text">Add Data</span>
             </a>
           </li>
+          <li class="nav-item">
+            <b></b>
+            <b></b>
+            <a href="users.html">
+              <i class="fa fa-users nav-icon"></i>
+              <span class="nav-text">Users</span>
+            </a>
+          </li>
         </ul>
       </nav>
 
       <section class="content">
         <h2>Pokémon Cards</h2>
+        <!-- Search input -->
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search by name..." />
+        </div>
+
+        <!-- Pokemon Table -->
         <table id="pokemon-table">
           <thead>
             <tr>
@@ -55,6 +64,13 @@
             <!-- Data rows will be inserted here -->
           </tbody>
         </table>
+
+        <!-- Pagination controls -->
+        <div class="pagination">
+          <button id="prev-page">Previous</button>
+          <span id="page-number">Page 1</span>
+          <button id="next-page">Next</button>
+        </div>
       </section>
     </main>
     <script src="./assets/scripts/cards.js"></script>
