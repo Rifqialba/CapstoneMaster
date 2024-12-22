@@ -15,9 +15,9 @@ th {
   background-color: #f4f4f4;
 }
 .navbar-logo {
-  width: 70px; /* Sesuaikan ukuran sesuai keinginan */
-  height: 70px; /* Pastikan tinggi dan lebar sama untuk menjaga proporsi */
-  object-fit: cover; /* Memastikan gambar terpotong dengan baik jika ukurannya tidak sesuai */
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
   margin-bottom: 20px;
   margin-left: 50px;
 }

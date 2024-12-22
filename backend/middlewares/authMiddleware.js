@@ -18,7 +18,6 @@ exports.authenticate = (req, res, next) => {
   }
 };
 
-// Middleware untuk memeriksa otorisasi berdasarkan role
 exports.authorize = (roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {

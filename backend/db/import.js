@@ -1,11 +1,9 @@
 const fs = require("fs");
 const db = require("./db");
 
-// Baca file JSON
 const rawData = fs.readFileSync("cards.json");
 const cards = JSON.parse(rawData);
 
-// Fungsi untuk mengimpor data
 const importCards = () => {
   const sql = `
     INSERT INTO pokemons (id, set_name, name, supertype, subtypes, types, number, rarity, small_image_url, large_image_url)
@@ -37,5 +35,4 @@ const importCards = () => {
   });
 };
 
-// Jalankan fungsi import
 importCards();

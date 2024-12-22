@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const userTableBody = document.querySelector("#user-table tbody");
 
-  // Fungsi untuk memuat data pengguna
   async function fetchUsers() {
     try {
       const token = localStorage.getItem("token");
@@ -26,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         throw new Error("The data received is not an array.");
       }
 
-      userTableBody.innerHTML = ""; // Kosongkan tabel sebelum mengisi
+      userTableBody.innerHTML = "";
       users.forEach((user) => {
         const row = document.createElement("tr");
         row.innerHTML = `
@@ -40,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
         userTableBody.appendChild(row);
       });
 
-      // Event listener untuk tombol hapus
       document.querySelectorAll(".btn-delete").forEach((button) => {
         button.addEventListener("click", async (e) => {
           const userId = e.target.dataset.id;
@@ -53,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
               },
             });
             alert("User deleted successfully!");
-            fetchUsers(); // Refresh data
+            fetchUsers();
           } catch (error) {
             console.error("Error deleting user:", error);
             alert("Failed to delete user.");
@@ -62,10 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     } catch (error) {
       console.error("Error fetching users:", error);
-      alert(error.message); // Menampilkan pesan error yang lebih informatif
+      alert(error.message);
     }
   }
 
-  // Panggil fungsi untuk memuat data pengguna
   fetchUsers();
 });

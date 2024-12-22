@@ -6,7 +6,6 @@ document.getElementById("registerForm").addEventListener("submit", async functio
   const role = document.getElementById("role").value;
   const secretKey = document.getElementById("secretKey").value;
 
-  // Only include secretKey if the role is 'admin'
   const payload = { username, password, role };
   if (role === "admin" && secretKey) {
     payload.secretKey = secretKey;
@@ -24,13 +23,12 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
   if (response.status === 201) {
     alert(data.message);
-    window.location.href = "login.html"; // Redirect to login page
+    window.location.href = "login.html";
   } else {
     alert(data.message);
   }
 });
 
-// Show secret key field if role is admin
 document.getElementById("role").addEventListener("change", function () {
   const adminSecretKeyField = document.getElementById("adminSecretKey");
   if (this.value === "admin") {

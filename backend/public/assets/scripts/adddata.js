@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (response.ok) {
         alert("Pokémon added successfully!");
-        form.reset(); // Reset form fields
+        form.reset();
       } else {
         alert(`Error: ${result.error}`);
       }

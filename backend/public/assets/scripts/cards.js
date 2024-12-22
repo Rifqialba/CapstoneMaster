@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   let currentPage = 1;
   let allPokemons = [];
 
-  // Fetch and display Pokemon data
   const fetchPokemons = async () => {
     try {
       const response = await fetch("http://localhost:3000/api/pokemons");
@@ -21,15 +20,13 @@ document.addEventListener("DOMContentLoaded", async function () {
   };
 
   const displayPokemons = () => {
-    // Filter Pokémon by search term
     const searchTerm = searchInput.value.toLowerCase();
     const filteredPokemons = allPokemons.filter((pokemon) => pokemon.name.toLowerCase().includes(searchTerm));
 
-    // Paginate filtered Pokémon
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     const paginatedPokemons = filteredPokemons.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
-    tableBody.innerHTML = ""; // Clear table body before adding new rows
+    tableBody.innerHTML = "";
 
     paginatedPokemons.forEach((pokemon) => {
       const row = document.createElement("tr");
@@ -48,15 +45,12 @@ document.addEventListener("DOMContentLoaded", async function () {
       tableBody.appendChild(row);
     });
 
-    // Update page number
     pageNumberElement.textContent = `Page ${currentPage}`;
 
-    // Enable or disable pagination buttons
     prevPageButton.disabled = currentPage === 1;
     nextPageButton.disabled = currentPage * ITEMS_PER_PAGE >= filteredPokemons.length;
   };
 
-  // Pagination controls
   prevPageButton.addEventListener("click", () => {
     if (currentPage > 1) {
       currentPage--;
@@ -71,13 +65,11 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   });
 
-  // Search input handler
   searchInput.addEventListener("input", () => {
-    currentPage = 1; // Reset to first page on search
+    currentPage = 1;
     displayPokemons();
   });
 
-  // Initial fetch of pokemons
   fetchPokemons();
 });
 
@@ -91,7 +83,6 @@ window.editPokemon = async (id) => {
   const updatedPokemon = { id, name };
 
   try {
-    // Show loading indicator
     alert("Updating Pokémon...");
     const response = await fetch("http://localhost:3000/api/pokemons", {
       method: "PUT",
@@ -99,8 +90,8 @@ window.editPokemon = async (id) => {
       body: JSON.stringify(updatedPokemon),
     });
     const result = await response.json();
-    alert(result.message); // Show response message
-    fetchPokemons(); // Refresh the table
+    alert(result.message);
+    fetchPokemons();
   } catch (error) {
     console.error("Error updating Pokémon:", error);
   }
@@ -111,14 +102,13 @@ window.deletePokemon = async (id) => {
   if (!confirmDelete) return;
 
   try {
-    // Show loading indicator
     alert("Deleting Pokémon...");
     const response = await fetch(`http://localhost:3000/api/pokemons/${id}`, {
       method: "DELETE",
     });
     const result = await response.json();
-    alert(result.message); // Show response message
-    fetchPokemons(); // Refresh the table
+    alert(result.message);
+    fetchPokemons();
   } catch (error) {
     console.error("Error deleting Pokémon:", error);
   }
