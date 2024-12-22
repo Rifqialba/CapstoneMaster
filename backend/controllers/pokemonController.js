@@ -1,6 +1,5 @@
 const db = require("../db/db");
 
-// Get all pokemons
 exports.getPokemons = (req, res) => {
   const sql = "SELECT * FROM pokemons";
   db.query(sql, (err, results) => {
@@ -14,7 +13,6 @@ exports.getPokemons = (req, res) => {
   });
 };
 
-// Handler untuk memperbarui data Pokemon
 exports.updatePokemon = (req, res) => {
   const { id, name } = req.body;
 
@@ -37,7 +35,6 @@ exports.updatePokemon = (req, res) => {
   });
 };
 
-// Delete pokemon
 exports.deletePokemon = (req, res) => {
   const { id } = req.params;
   const sql = "DELETE FROM pokemons WHERE id = ?";
@@ -52,7 +49,6 @@ exports.deletePokemon = (req, res) => {
   });
 };
 
-// Add Pokemon
 exports.addPokemon = (req, res) => {
   const {
     id,

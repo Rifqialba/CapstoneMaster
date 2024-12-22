@@ -1,6 +1,5 @@
 const db = require("../db/db");
 
-// Mendapatkan semua pengguna
 exports.getAllUsers = (req, res) => {
   const sql = "SELECT id, username, role FROM users";
 
@@ -13,7 +12,6 @@ exports.getAllUsers = (req, res) => {
   });
 };
 
-// Menghapus pengguna berdasarkan ID
 exports.deleteUser = (req, res) => {
   const { id } = req.params;
 

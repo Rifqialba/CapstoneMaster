@@ -9,12 +9,9 @@ navItems.forEach((navItem, i) => {
   });
 });
 
-// Function to handle logout
 document.getElementById("logout-btn").addEventListener("click", function () {
-  // Clear any session storage or cookies related to the user
-  sessionStorage.removeItem("userToken"); // Example: remove a user token from session storage
-  localStorage.removeItem("user"); // Example: remove user data from local storage
+  sessionStorage.removeItem("userToken");
+  localStorage.removeItem("user");
 
-  // Redirect to the login page or homepage
-  window.location.href = "login.html"; // Change this to the login or home page URL
+  window.location.href = "login.html";
 });
