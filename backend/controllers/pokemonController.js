@@ -13,6 +13,28 @@ exports.getPokemons = (req, res) => {
   });
 };
 
+exports.getPokemonById = (req, res) => {
+  const { id } = req.params;
+
+  if (!id) {
+    return res.status(400).json({ error: "ID is required" });
+  }
+
+  const sql = "SELECT * FROM pokemons WHERE id = ?";
+  db.query(sql, [id], (err, results) => {
+    if (err) {
+      console.error("Database error:", err);
+      res.status(500).json({ error: err.message });
+    } else {
+      if (results.length === 0) {
+        return res.status(404).json({ message: "Pokémon not found" });
+      }
+      console.log("Fetched pokemon by ID:", results);
+      res.json(results[0]);
+    }
+  });
+};
+
 exports.updatePokemon = (req, res) => {
   const { id, name } = req.body;
 
