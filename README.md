@@ -24,39 +24,19 @@ Penyiapan Proyek
 
 Buka klien MySQL Anda dan buat database dengan kredensial berikut:
 
-CREATE DATABASE pokemon_db;
+<img width="549" alt="Screenshot 2024-12-22 at 21 42 30" src="https://github.com/user-attachments/assets/0ccc4dd2-3ab2-4526-a3a9-82bc3afc55b1" />
+
 
 Gunakan parameter berikut untuk koneksi MySQL Anda:
 
-Host: localhost
-User: root
-Password: password_ku
-Database: pokemon_db
+<img width="544" alt="Screenshot 2024-12-22 at 21 43 32" src="https://github.com/user-attachments/assets/2f509725-1144-4142-913a-59d1abca3f89" />
 
 Buat tabel yang diperlukan dengan menjalankan perintah SQL berikut:
 
--- Membuat tabel pokemons
-CREATE TABLE pokemons (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    set_name VARCHAR(255),
-    name VARCHAR(255),
-    supertype VARCHAR(255),
-    subtypes VARCHAR(255),
-    types VARCHAR(255),
-    number VARCHAR(50),
-    rarity VARCHAR(100),
-    small_image_url TEXT,
-    large_image_url TEXT
-);
 
--- Membuat tabel users
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) UNIQUE,
-    password VARCHAR(255),
-    role ENUM('user', 'admin'),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+<img width="547" alt="Screenshot 2024-12-22 at 21 44 09" src="https://github.com/user-attachments/assets/cb18abaa-d0a7-440e-a8f2-746dba557f2f" />
+
+
 
 2. Instal Modul yang Diperlukan
 
@@ -82,19 +62,8 @@ Struktur Penting
 
 Berikut adalah gambaran singkat tentang struktur proyek:
 
-.
-├── import.js      # Skrip untuk mengimpor data ke database
-├── server.js      # File utama server
-├── package.json   # Dependensi Node.js
-├── routes/        # Handler rute API
-├── controllers/   # Logika bisnis untuk menangani permintaan
-├── middleware/    # Fungsi middleware
-├── db/            # Fungsi untuk koneksi database
-├── utils/         # Fungsi hasing 
-└── README.md      # Dokumentasi proyek
 
-
-
+<img width="576" alt="Screenshot 2024-12-22 at 21 45 43" src="https://github.com/user-attachments/assets/83134819-04c4-4f81-b990-9f50261b545f" />
 
 
 Penggunaan
