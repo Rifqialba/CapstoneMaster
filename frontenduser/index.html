@@ -5,8 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon Display</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/navbar.css" />
   </head>
+
   <body>
+    <div class="navbar">
+      <!-- Logo Pokémon di kiri -->
+      <div class="logo">
+        <img src="./assets/logo.png" alt="Pokemon Logo" class="logo-img" />
+      </div>
+
+      <!-- Tombol Logout di kanan -->
+      <button class="logout-btn">Logout</button>
+    </div>
+
+    <h1>
+      Pokémon cards are collectible trading cards featuring various Pokémon
+      characters, each with unique abilities, types, and stats. Players use
+      these cards in strategic battles, aiming to outsmart their opponents with
+      their Pokémon's strengths and tactics. Whether you're a collector or a
+      player, each card brings the exciting world of Pokémon to life with
+      vibrant artwork and powerful moves.
+    </h1>
+
     <div class="pokemon-container">
       <div class="pokemon-card">
         <img id="pokemon-image" alt="Pokemon Image" />
@@ -20,6 +41,17 @@
       </div>
     </div>
 
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
+
     <script src="script.js"></script>
+    <script src="button.js"></script>
+    <script>
+      const logoutButton = document.querySelector(".logout-btn");
+
+      logoutButton.addEventListener("click", () => {
+        // Misalnya, mengarahkan ke halaman login
+        window.location.href = "login.html";
+      });
+    </script>
   </body>
 </html>
