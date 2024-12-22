@@ -6,7 +6,7 @@ body {
     rgba(0, 0, 0, 0.7) 20%,
     transparent 20%
   );
-  background-size: 40px 40px; /* Efek pola berulang */
+  background-size: 40px 40px;
   justify-content: center;
   align-items: start;
   min-height: 100vh;
@@ -40,7 +40,7 @@ h1 {
 }
 
 .pokemon-card:hover {
-  transform: scale(1.05); /* Efek pembesaran sedikit */
+  transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -51,25 +51,25 @@ h1 {
 
 .pokemon-info {
   position: absolute;
-  bottom: 0; /* Menyembunyikan konten di bawah kartu */
+  bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  transform: translateY(100%); /* Memulai dari posisi bawah */
-  opacity: 0; /* Konten disembunyikan */
+  transform: translateY(100%);
+  opacity: 0;
 }
 
 .pokemon-info p {
   font-size: 12px;
-  padding: 5px; /* Menambahkan sedikit padding untuk keterbacaan */
+  padding: 5px;
 }
 
 .pokemon-card:hover .pokemon-info {
   opacity: 1;
-  transform: translateY(0); /* Menampilkan informasi dengan animasi naik */
+  transform: translateY(0);
 }
 
 @keyframes gradientShift {
@@ -81,22 +81,39 @@ h1 {
   }
 }
 
-/* style button */
 .scroll-to-top {
-  position: fixed; /* Posisi tetap pada layar */
-  bottom: 20px; /* Menjaga jarak dari bawah */
-  right: 20px; /* Menjaga jarak dari kanan */
-  background-color: white; /* Warna latar belakang biru */
-  color: black; /* Warna teks putih */
-  border: 2px solid white; /* Menghapus border default */
-  /* border-radius: 50%; Membuat tombol berbentuk bulat */
-  padding: 15px; /* Padding agar tombol lebih besar */
-  font-size: 20px; /* Ukuran font untuk ikon */
-  cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
-  transition: background-color 0.3s ease; /* Animasi saat hover */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .scroll-to-top:hover {
-  background-color: black; /* Warna saat hover */
-  color: white; /* Warna saat hover */
+  background-color: black;
+  color: white;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#page-number {
+  font-size: 16px;
+  margin: 0 10px;
 }

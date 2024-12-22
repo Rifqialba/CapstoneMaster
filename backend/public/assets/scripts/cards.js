@@ -21,10 +21,15 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   const displayPokemons = () => {
     const searchTerm = searchInput.value.toLowerCase();
-    const filteredPokemons = allPokemons.filter((pokemon) => pokemon.name.toLowerCase().includes(searchTerm));
+    const filteredPokemons = allPokemons.filter((pokemon) =>
+      pokemon.name.toLowerCase().includes(searchTerm)
+    );
 
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const paginatedPokemons = filteredPokemons.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+    const paginatedPokemons = filteredPokemons.slice(
+      startIndex,
+      startIndex + ITEMS_PER_PAGE
+    );
 
     tableBody.innerHTML = "";
 
@@ -48,7 +53,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     pageNumberElement.textContent = `Page ${currentPage}`;
 
     prevPageButton.disabled = currentPage === 1;
-    nextPageButton.disabled = currentPage * ITEMS_PER_PAGE >= filteredPokemons.length;
+    nextPageButton.disabled =
+      currentPage * ITEMS_PER_PAGE >= filteredPokemons.length;
   };
 
   prevPageButton.addEventListener("click", () => {
@@ -98,7 +104,9 @@ window.editPokemon = async (id) => {
 };
 
 window.deletePokemon = async (id) => {
-  const confirmDelete = confirm("Are you sure you want to delete this Pokémon?");
+  const confirmDelete = confirm(
+    "Are you sure you want to delete this Pokémon?"
+  );
   if (!confirmDelete) return;
 
   try {

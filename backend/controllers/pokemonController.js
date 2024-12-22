@@ -37,7 +37,7 @@ exports.updatePokemon = (req, res) => {
   });
 };
 
-// Delete a pokemon
+// Delete pokemon
 exports.deletePokemon = (req, res) => {
   const { id } = req.params;
   const sql = "DELETE FROM pokemons WHERE id = ?";
@@ -52,16 +52,38 @@ exports.deletePokemon = (req, res) => {
   });
 };
 
-// Add a new Pokemon
+// Add Pokemon
 exports.addPokemon = (req, res) => {
-  const { id, set_name, name, supertype, subtypes, types, number, rarity, small_image_url, large_image_url } = req.body;
+  const {
+    id,
+    set_name,
+    name,
+    supertype,
+    subtypes,
+    types,
+    number,
+    rarity,
+    small_image_url,
+    large_image_url,
+  } = req.body;
 
   const sql = `INSERT INTO pokemons (id, set_name, name, supertype, subtypes, types, number, rarity, small_image_url, large_image_url) 
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
 
   db.query(
     sql,
-    [id, set_name, name, supertype, subtypes, types, number, rarity, small_image_url, large_image_url],
+    [
+      id,
+      set_name,
+      name,
+      supertype,
+      subtypes,
+      types,
+      number,
+      rarity,
+      small_image_url,
+      large_image_url,
+    ],
     (err, result) => {
       if (err) {
         console.error("Error adding pokemon:", err);

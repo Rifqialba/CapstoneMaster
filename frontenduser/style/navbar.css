@@ -1,28 +1,28 @@
-/* Styling untuk navbar */
 .navbar {
-  display: flex; /* Menggunakan flexbox untuk tata letak */
-  justify-content: space-between; /* Menyebarkan elemen kiri dan kanan */
-  align-items: center; /* Vertikal center */
-  background-color: #333; /* Warna latar belakang navbar */
-  padding: 10px 20px; /* Memberikan ruang dalam navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
 }
 
 .logo-img {
-  height: 50px; /* Ukuran logo */
-  width: auto; /* Menjaga rasio aspek logo */
+  height: 50px;
+  width: auto;
 }
 
 .logout-btn {
-  background-color: #ff4d4d; /* Warna merah untuk tombol logout */
-  color: white; /* Warna teks putih */
-  border: none; /* Menghapus border default */
-  border-radius: 5px; /* Memberikan sudut melengkung pada tombol */
-  padding: 10px 20px; /* Padding tombol */
-  cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
-  font-size: 16px; /* Ukuran font pada tombol */
-  transition: background-color 0.3s ease; /* Animasi saat hover */
+  font-family: cursive;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .logout-btn:hover {
-  background-color: #cc0000; /* Warna tombol saat dihover */
+  background-color: #cc0000;
 }

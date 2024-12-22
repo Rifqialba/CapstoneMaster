@@ -17,7 +17,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api", pokemonRoutes);
 app.use("/api", userRoutes);
 
-// Jalankan server
 app.listen(PORT, () => {
   console.log(`Server berjalan di http://localhost:${PORT}`);
 });
