@@ -7,18 +7,13 @@
     <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
-    <div class="pokemon-container">
-      <div class="pokemon-card">
-        <img id="pokemon-image" alt="Pokemon Image" />
-        <div class="pokemon-info">
-          <h2 id="pokemon-name"></h2>
-          <p id="pokemon-number"></p>
-          <p id="pokemon-type"></p>
-          <p id="pokemon-rarity"></p>
-          <p id="pokemon-subtypes"></p>
-        </div>
-      </div>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search by name..." />
     </div>
+
+    <div class="pokemon-container" id="pokemon-container"></div>
+
+    <div class="pagination" id="pagination"></div>
 
     <script src="script.js"></script>
   </body>
